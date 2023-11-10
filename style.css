@@ -1,0 +1,154 @@
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #27272c;
+    color: #d5d5d5;
+}
+p{
+    font-size: xxx-large;
+}
+.container {
+<!--background-color: #3c3c42;-->
+<!--border: 1px solid gray;-->
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 60%;
+}
+.fade-transition {
+    opacity: 0;
+    transition: opacity 0.05s ease-in;
+}
+
+.fade-transition.show {
+    opacity: 1;
+}
+#info{
+    width: 35%;
+<!--background-color: #3c3c42;-->
+<!--border: 1px solid gray;-->
+    margin: 0 auto;
+text-align: center;
+}
+#compareArrow{
+    margin:25% 5% 5% 5%;
+    transition: transform 0.5s ease-in-out;
+}
+#playerCard,#computerCard{
+    max-width: 100%;
+}
+#playerDiv, #computerDiv{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+}
+#playerScore,#computerScore{
+    height:10px;
+}
+#startGame {
+    background-color: #4CAF50;
+    color: #d5d5d5;
+    border: none;
+    cursor: pointer;
+    }
+
+#startGame:hover {
+    background-color: #45a049;
+}
+#middleElements{
+    margin-top: 15%;
+}
+#result {
+    font-size: xx-large;
+    font-weight: bold;
+}
+.round-score {
+    background-color: #3498db;
+    color: #000000;
+    font-weight: bold;
+}
+
+button {
+    position: relative;
+    background: #444;
+    color: #d5d5d5;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    transition: 0.2s;
+}
+
+#startGame:hover {
+    letter-spacing: 0.2rem;
+    padding: 1rem 1.5rem;
+    background: #39FF14;
+    color: #39FF14;
+    animation: box-start 1s infinite;
+}
+
+#startGame::before {
+    content: "";
+    position: absolute;
+    inset: 2%;
+    background: #272822;
+}
+
+#startGame span {
+    position: relative;
+}
+
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes box-start {
+    0% {
+        box-shadow: #27272c;
+    }
+    50% {
+        box-shadow: 0 0 10px #39FF14;
+    }
+    100% {
+        box-shadow: #27272c;
+    }
+}
+@media screen and (max-width: 600px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    p{
+        font-size:large;
+    }
+    #compareArrow {
+        width: 80%;
+    }
+    .container{
+        width: 90%;
+    }
+    #info{
+        width: 90%;
+        float: bottom;
+        margin: 0 auto;
+    }
+    #result {
+        font-size: x-large;
+    }
+
+    #startGame {
+        padding: 10px 15px;
+    }
+}
